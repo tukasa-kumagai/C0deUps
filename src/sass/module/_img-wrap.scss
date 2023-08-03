@@ -1,0 +1,45 @@
+@use "global" as *;
+
+//TOPーMVの表示アニメーション
+.img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrap:before,
+.img-wrap:after {
+  animation: 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
+  bottom: 0;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.img-wrap:before {
+  animation-name: img-wrap-before;
+  left: 0;
+  right: 50%;
+}
+
+.img-wrap:after {
+  animation-name: img-wrap-after;
+  left: 50%;
+  right: 0;
+}
+
+@keyframes img-wrap-before {
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes img-wrap-after {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+

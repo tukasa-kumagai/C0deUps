@@ -1,0 +1,145 @@
+@use "global" as *;
+
+
+.information {
+    background-color: $green2;
+    
+}
+
+.information__inner {
+padding: 0 rem(15);
+
+
+@include mq("md") {
+    position: relative;
+    padding-bottom: rem(60);
+    max-width: rem(1080);
+    padding: 0 rem(0);
+margin: 0 auto;
+   }
+}
+.information__section-title {
+    width: rem(189);
+    margin: 0 auto;
+    font-weight: bold;
+    @include mq("md") {
+        width: rem(236);
+        padding-top: rem(0);
+        padding-bottom: rem(0);
+        
+       }
+  }
+  .information__section-text  {
+    font-size: rem(12);
+    color: $green;
+    text-align: center;
+    margin-top: rem(10);
+    @include mq("md") {
+        margin-top: rem(15);
+       }
+  }
+.space__information-head {
+padding-top: rem(85);
+
+@include mq("md") {
+    padding-top: rem(102);
+   }
+}
+.space__information-foot {
+padding-bottom: rem(0);
+
+@include mq("md") {
+    padding-bottom: rem(10);
+}
+}
+.information__main {
+
+    @include mq("md") {
+       display: flex;
+       justify-content: center;
+      }
+}
+
+.information__img {
+
+    @include mq("md") {
+        max-width: rem(540);
+       }
+}
+.information__group {
+
+    @include mq("md") {
+        max-width: rem(492);
+        margin-left: rem(48);
+        margin-top: rem(77);
+       }
+}
+.information__title {
+font-size: rem(20);
+font-weight: bold;
+border-bottom: rem(1) solid $black2;
+margin-top: rem(23);
+font-weight: bold;
+
+@include mq("md") {
+    font-size: rem(24);
+    padding-top: rem(0);
+    line-height: rem(24);
+   }
+}
+.information__text {
+font-size: rem(16);
+font-weight: 500;
+line-height: rem(24);
+margin-top: rem(10);
+font-weight: 400;
+@include mq("md") {
+   
+    padding-bottom: rem(5);
+   }
+
+}
+.c-space__information-button-head {
+    padding-top: rem(32);
+    @include mq("md") {
+        padding-top: rem(30);
+    }
+
+}
+.c-space__information-button-foot {
+padding-top: rem(59);
+
+@include mq("md") {
+    padding-top: rem(80);
+}
+}
+
+div.information__img{
+    position: relative;
+    width: 100%;
+    margin: rem(0) auto rem(0);
+    margin-top: rem(30);
+    @include mq("md") {
+        position: relative;
+        width: 80%;
+        margin: rem(30) 0 rem(30);
+    }
+ 
+}
+div.information__img .color{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $green;
+}
+div.information__img img{
+    display: block;
+    width: 100%;
+}
+
+
+
+

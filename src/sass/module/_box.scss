@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.box {
+background-color: $white;
+
+@include mq("md") {
+    background-color: $white;
+    box-shadow: 0 0 rem(8) gray;
+  }
+}
+
+
+.box__img {
+width: rem(301);
+margin: 0 auto;
+}
+
+.box__body {
+padding: rem(24) 0;
+padding-bottom: 0;
+
+}
+.box__day {
+    font-size: rem(12);
+}
+
+.box__title {
+    padding-bottom: rem(6);
+    font-size: rem(16);
+border-bottom: rem(1) solid $green;
+
+@include mq("md") {
+    line-height: rem(18);
+}
+}
+
+.box__text {
+font-size: rem(16);
+line-height: rem(24);
+margin-top: rem(16);
+}

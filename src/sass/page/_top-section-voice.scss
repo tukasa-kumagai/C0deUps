@@ -1,0 +1,129 @@
+@use "global" as *;
+
+
+.vice {
+ 
+}
+.vice__inner {
+  position: relative;
+padding: 0 rem(15);
+margin: 0 auto;
+max-width: rem(375);
+@include mq("md") {
+    margin-top: rem(451);
+    max-width: rem(1150);
+  }
+}
+.vice__main {
+
+  @include mq("md") {
+    display: flex;
+    max-width: rem(1080);
+  }
+}
+.vice__bg-img1 {
+display: none;
+  @include mq("md") {
+    display: flex;
+    position: absolute;
+    top: 71%;
+    left: 91%;
+    width: rem(71);
+  }
+}
+.vice__bg-img2 {
+display: none;
+  @include mq("md") {
+    display: flex;
+    display: flex;
+    left: -4%;
+    position: absolute;
+    top: -12%;
+    width: rem(302);
+  }
+}
+.p-card-list-item {
+ 
+    width: rem(520);
+}
+.space__vice-head {
+padding-top: rem(0);
+
+@include mq("md") {
+  padding-top: rem(20); 
+}
+}
+.vice__section-title {
+  width: rem(87);
+  margin: 0 auto;
+
+  @include mq("md") {
+    width: rem(157);
+    margin: 0 auto;
+  }
+
+  @include mq("md") {
+    width: rem(109);
+  }
+}
+.vice__section-text  {
+  font-size: rem(12);
+  color: $green;
+  text-align: center;
+  margin-top: rem(14);
+  @include mq("md") {
+    margin-top: rem(17);
+  }
+
+}
+.space__vice-foot {
+  padding-top: rem(41);
+
+  @include mq("md") {
+    padding-top: rem(32);
+  }
+}
+.c-space__vice-button-head {
+padding-top: rem(0);
+@include mq("md") {
+  padding-top: rem(80);
+}
+}
+.c-space__vice-button-foot {
+  padding-top: rem(43);
+
+  @include mq("md") {
+    padding-top: rem(118);
+  }
+}
+
+
+
+div.card2__img{
+  position: relative;
+width: 100%;
+  margin: rem(0) auto rem(0);
+margin-top: rem(10);
+  @include mq("md") {
+    position: relative;
+    width: 80%;
+    margin: rem(0) auto rem(0);
+  }
+}
+
+.card2__img img {
+  width: 151px;
+}
+div.card2__img div.color{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $green;
+}
+div.card2__img img{
+  display: block;
+  width: 100%;
+}

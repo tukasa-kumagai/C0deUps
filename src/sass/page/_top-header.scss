@@ -1,0 +1,249 @@
+@use "global" as *;
+
+
+.header.change-color{
+    background-color: $green;
+    transition: 0.3s;
+    opacity: 1;
+   
+  }
+.p-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: rem(80);
+    opacity: 0.6;
+   
+    @include mq("md") {
+      height: rem(90);
+    }
+  }
+  .p-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0 rem(15);
+    padding-right: rem(10);
+    @include mq("md") {
+      padding-left: rem(40);
+      padding-right: rem(20);
+     
+    }
+
+  }
+    .l-header {
+      background-color: #000;
+     z-index: 9999;
+         }
+  
+  .c-logo__link {
+    width: rem(102);
+    position: relative;
+    z-index: 9999;
+
+    @include mq("md") {
+      width: rem(133);
+    }
+  }
+  .p-sp-nav{
+    //display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $green;
+    height: 100vh;
+    width: 100%;
+    z-index: 8888;
+    transform: translateX(-100%);
+    // transform: translateY(-100%);
+    transition: ease .3s;//表示速度
+   
+
+  
+  }
+  .p-sp-nav.is-open {
+    transform: translateX(0%);
+    //transform: translateY(0%);
+  }
+   
+.p-sp-nav__content {
+  display: flex;
+  margin-top: rem(44);
+  justify-content: center;
+}
+
+.p-sp-nav__wrapper {
+
+}
+.p-sp-nav__group {
+  margin-left: rem(10);
+}
+  
+.p-sp-items {
+  color: $white;
+margin-top: rem(40);
+}
+
+.p-sp-item1 {
+  padding-left: rem(20);
+	line-height: 1.6em;
+    background: url(/assets/images/common/ヒトデ.png) left rem(0) top rem(3) no-repeat;
+	background-size: rem(15) auto;
+    font-size: rem(16);
+}
+
+.p-sp-item2 {
+  padding-left: rem(20);
+  margin-top: rem(24);
+  font-size: rem(16);
+}
+  .p-pc-nav {
+    height: inherit;
+   display: none;
+
+   @include mq("md") {
+    display: block;
+  }
+  }
+  
+  .pc-nav__items {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    margin:0 0 rem(50) 0;
+    list-style: none;
+   
+  }
+  
+
+//下線
+.pc-nav__items li a{
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+}
+
+.pc-nav__items li.current a,
+.pc-nav__items li a:hover{
+
+}
+
+.pc-nav__items li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  bottom: 25%;
+  /*線の形状*/
+  width: 80%;
+  height: rem(2);
+  background:$white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.pc-nav__items li.current a::after,
+.pc-nav__items li a:hover::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+
+
+
+  .pc-nav__item  {
+    height: inherit;
+   @include mq("md") {
+    flex-direction: column;
+    line-height: rem(18);
+  }
+}
+
+
+  
+  .pc-nav__item a {
+    height: inherit;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+  
+  padding: 0 rem(17);
+  font-size: rem(10);
+
+  }
+
+
+  .header-nav-item-link {
+    flex-direction: column;
+    font-size: rem(18);
+    height: inherit;
+  }
+ 
+ 
+  .header-nav-item-head{
+  font-size: rem(18);
+
+  }
+
+  .header-nav-item-foot {
+    font-size: rem(10);
+    text-align: center;
+    @include mq("md") {
+      line-height: rem(15);
+    }
+  }
+
+  //c-hamburger
+  .c-hamburger{
+   z-index:9999;
+
+  }
+  
+  
+  .c-hamburger span {
+   position: relative;
+   display: block;
+   height: rem(1);
+   width: rem(32);
+   background: $white;
+   transition: ease .3s;
+
+   @include mq("md") {
+    display: none;
+  }
+  }
+  
+  .c-hamburger span:nth-child(1) {
+   top: 0;
+  }
+  
+  .c-hamburger span:nth-child(2) {
+   margin: rem(10) 0;
+  }
+  
+  .c-hamburger span:nth-child(3) {
+   top: 0;
+  }
+  /*is-OPEN時の動き*/
+  .c-hamburger.is-open span:nth-child(1) {
+   top: rem(5);
+   transform: rotate(45deg);
+  }
+  
+  .c-hamburger.is-open span:nth-child(2) {
+   transform: translateY(-50%);
+   opacity: 0;
+  }
+  
+  .c-hamburger.is-open span:nth-child(3) {
+   top: rem(-16);
+   transform: rotate(-45deg);
+  }
+  
+  

@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.pagetop {
+    display: none;
+    position: fixed;
+    bottom: rem(30);
+    right: rem(15);
+    width: rem(48);
+    z-index: 100000;
+
+    @include mq("md") {
+        width: rem(80);
+    }
+}
+
+
+.pagetop a {
+    display: block;
+    text-align: center;
+    color: #222;
+    text-decoration: none;
+	filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    width: rem(80);
+}
+.pagetop a:hover {
+    display: block;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+	filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.pagetop__button {
+    width: rem(48);
+
+    @include mq("md") {
+        width: rem(80);
+    }
+}

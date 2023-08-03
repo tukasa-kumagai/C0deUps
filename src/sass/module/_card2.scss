@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.card2 {
+
+@include mq("md") {
+
+  }
+}
+
+
+.card2__head {
+display: flex;
+
+}
+
+.card2__detail {
+border-bottom: rem(1) solid $green;
+margin-right: rem(15);
+}
+
+
+
+.card2__category {
+display: block;
+    @include mq("md") {
+        display: flex;
+        margin-top: rem(48);
+        justify-content: space-between;
+        align-items: end;
+        margin-top: rem(31);
+      }
+}
+.card2__age {
+font-size: rem(12);
+}
+.card2__course {
+    font-size: rem(12);
+    border: rem(1) solid $green;
+    color:  $green;
+    display: inline-block;
+    padding: rem(6) rem(12) rem(4) rem(10);
+
+    @include mq("md") {
+        padding: rem(6) rem(10) rem(8) rem(20);
+            margin-right: rem(10);
+      }
+}
+.card2__title {
+    font-size: rem(16);
+    font-weight: 500;
+margin-top: rem(4);
+    @include mq("md") {
+        font-size: rem(24);
+    font-weight: 500;
+    margin-top: rem(8);
+    margin-left: rem(9);
+      }
+}
+
+.card2__img {
+    max-width: rem(151);
+   
+    @include mq("md") {
+        max-width: rem(180);
+    }
+}
+.card2__text {
+margin-top: rem(15);
+
+@include mq("md") {
+    margin-top: rem(42);
+    margin-left: rem(10);
+ 
+}
+}
+
+

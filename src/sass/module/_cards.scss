@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.cards  {
+display: flex;
+
+max-width: rem(1200);
+
+@include mq("md") {
+max-width: rem(1080);
+ 
+   
+  }
+
+}
+
+
+
+
